@@ -61,7 +61,14 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 {
 	
 	CDialogEx::DoDataExchange(pDX);
+	//HOME
+	/*
+	DDX_Control(pDX, IDC_INSHOP, m_Inshop);
+	DDX_Control(pDX, IDC_TAKEOUT, m_Takeout);
+	DDX_Control(pDX, IDC_TEXT, m_Text);
+	*/
 	
+	//BURGER
 	DDX_Control(pDX, IDC_FORK, m_Fork);
 	DDX_Control(pDX, IDC_SHRIMP, m_Shrimp);
 	DDX_Control(pDX, IDC_CHICKEN, m_Chicken);
@@ -94,13 +101,30 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_WAFFLE, m_Waffle);
 	DDX_Control(pDX, IDC_CHURROS, m_churros);
 	*/
+
+	//PAY
+	/*
+	DDX_Control(pDX, IDC_POINT, m_Point);
+	DDX_Control(pDX, IDC_NO, m_No);
+	DDX_Control(pDX, IDC_CARD, m_Card);
+	DDX_Control(pDX, IDC_COUPON, m_Coupon);
+	DDX_Control(pDX, IDC_CASH, m_Cash);
+	DDX_Control(pDX, IDC_TEXT1, m_Text1);
+	DDX_Control(pDX, IDC_TEXT2, m_Text2);
+	*/
+
 }
 
 BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	
+	//메인화면
+	/*
+	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCHomeDlg::OnBnClickedTakeout)
+	ON_BN_CLICKED(IDC_INSHOP, &CMFCHomeDlg::OnBnClickedInshop)
+	*/
+	//주문화면
 	ON_BN_CLICKED(IDC_BUGER, &CMFCApplication5Dlg::OnBnClickedBuger)
 	ON_BN_CLICKED(IDC_DRINK, &CMFCApplication5Dlg::OnBnClickedDrink)
 	ON_BN_CLICKED(IDC_SIDE, &CMFCApplication5Dlg::OnBnClickedSide)
@@ -163,6 +187,21 @@ void CMFCApplication5Dlg::OnSysCommand(UINT nID, LPARAM lParam)
 
 void CMFCApplication5Dlg::OnPaint()
 {
+	//MAIN
+	/*
+	CBitmap inshop;
+	inshop.LoadBitmapW(IDB_BITMAP_INSHOP);
+	m_Inshop.SetBitmap(inshop);
+
+	CBitmap takeout;
+	takeout.LoadBitmapW(IDB_BITMAP_TAKEOUT);
+	m_Takeout.SetBitmap(takeout);
+
+	CBitmap text;
+	text.LoadBitmapW(IDB_BITMAP_TEXT);
+	m_Text.SetBitmap(text);
+	*/
+	//BURGER
 	CBitmap fork;
 	fork.LoadBitmapW(IDB_FORK);
 	m_Fork.SetBitmap(fork);
@@ -258,6 +297,37 @@ void CMFCApplication5Dlg::OnPaint()
 	m_churros.SetBitmap(churros);
 	*/
 
+	//PAY
+	/*
+	CBitmap point;
+	point.LoadBitmapW(IDB_BITMAP_POINT);
+	m_Point.SetBitmap(point);
+
+	CBitmap no;
+	no.LoadBitmapW(IDB_BITMAP_NO);
+	m_No.SetBitmap(no);
+
+
+	CBitmap card;
+	card.LoadBitmapW(IDB_BITMAP_CARD);
+	m_Card.SetBitmap(card);
+
+	CBitmap coupon;
+	coupon.LoadBitmapW(IDB_BITMAP_COUPON);
+	m_Coupon.SetBitmap(coupon);
+
+	CBitmap cash;
+	cash.LoadBitmapW(IDB_BITMAP_CASH);
+	m_Cash.SetBitmap(cash);
+
+	CBitmap text1;
+	text1.LoadBitmapW(IDB_BITMAP_TEXT1);
+	m_Text1.SetBitmap(text1);
+
+	CBitmap text2;
+	text2.LoadBitmapW(IDB_BITMAP_TEXT2);
+	m_Text2.SetBitmap(text2);
+	*/
 	if (IsIconic())
 	{
 		CPaintDC dc(this); // 그리기를 위한 디바이스 컨텍스트입니다.
@@ -288,9 +358,28 @@ HCURSOR CMFCApplication5Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+//메인화면 코드
+/*
+void CMFCHomeDlg::OnBnClickedTakeout()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_Takeout.ShowWindow(SW_HIDE);
+	m_Inshop.ShowWindow(SW_HIDE);
+	m_Text.ShowWindow(SW_HIDE);
+
+}
 
 
+void CMFCHomeDlg::OnBnClickedInshop()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_Takeout.ShowWindow(SW_HIDE);
+	m_Inshop.ShowWindow(SW_HIDE);
+	m_Text.ShowWindow(SW_HIDE);
+}
+*/
 
+//주문화면 코드
 void CMFCApplication5Dlg::OnBnClickedBuger()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -422,4 +511,8 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 	m_Churros.ShowWindow(SW_SHOW);
 	*/
 }
+
+//결제화면코드
+
+
 

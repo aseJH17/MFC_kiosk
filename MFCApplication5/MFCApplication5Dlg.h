@@ -32,6 +32,12 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
+	//메인
+	/*
+	CButton m_Inshop;
+	CButton m_Takeout;
+	CButton m_Text;
+	*/
 	//메뉴
 	CButton m_Buger;
 	CButton m_Drink;
@@ -59,16 +65,31 @@ public:
 	CButton m_Coleslaw;
 	CButton m_Corn_salad;
 	CButton m_Chees_stick;
-	
+	*/
 	//디저트
-	
+	/*
 	CButton m_Softcon;
 	CButton m_Chococon;
 	CButton m_Waffle;
 	CButton m_Churros;
 	*/
+	//결제화면
+	/*
+	CButton m_Card;
+	CButton m_Cash;
+	CButton m_Coupon;
+	CButton m_No;
+	CButton m_Point;
+	CButton m_Text1;
+	CButton m_Text2;
+	*/
 
-
+	//메인화면
+	/*
+	afx_msg void OnBnClickedTakeout();
+	afx_msg void OnBnClickedInshop();
+	*/
+	//주문화면
 	afx_msg void OnBnClickedBuger();
 	afx_msg void OnBnClickedDrink();
 	afx_msg void OnBnClickedSide();
