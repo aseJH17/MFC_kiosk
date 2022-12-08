@@ -62,13 +62,41 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	
 	CDialogEx::DoDataExchange(pDX);
 	//HOME
-	/*
+	GetDlgItem(IDC_FORK)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_SHRIMP)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHICKEN)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHESSE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_BEAF)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_SQUID)->ShowWindow(SW_HIDE);
+
+	GetDlgItem(IDC_COKE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CIDER)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_ZEROCOKE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_ZEROCIDER)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_MILKSHAKE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_COFFEE)->ShowWindow(SW_HIDE);
+
+	GetDlgItem(IDC_FRENCH_FRIES)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHEESEBALL)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_NUGGET)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_COLESLAW)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CORN_SALAD)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHEESE_STICK)->ShowWindow(SW_HIDE);
+
+	GetDlgItem(IDC_SOFTCON)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHOCOCON)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_WAFFLE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CHURROS)->ShowWindow(SW_HIDE);
+
+	
 	DDX_Control(pDX, IDC_INSHOP, m_Inshop);
 	DDX_Control(pDX, IDC_TAKEOUT, m_Takeout);
+	/*
 	DDX_Control(pDX, IDC_TEXT, m_Text);
 	*/
 	
 	//BURGER
+	DDX_Control(pDX, IDC_BUGER, m_Buger);
 	DDX_Control(pDX, IDC_FORK, m_Fork);
 	DDX_Control(pDX, IDC_SHRIMP, m_Shrimp);
 	DDX_Control(pDX, IDC_CHICKEN, m_Chicken);
@@ -77,6 +105,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_SQUID, m_Squid);
 
 	//DRINK
+	DDX_Control(pDX, IDC_DRINK, m_Drink);
 	DDX_Control(pDX, IDC_COKE, m_Coke);
 	DDX_Control(pDX, IDC_CIDER, m_Cider);
 	DDX_Control(pDX, IDC_ZEROCOKE, m_Zerocoke);
@@ -85,6 +114,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_COFFEE, m_Coffee);
 
 	//SIDE
+	DDX_Control(pDX, IDC_SIDE, m_Side);
 	DDX_Control(pDX, IDC_FRENCH_FRIES, m_French_fries);
 	DDX_Control(pDX, IDC_CHEESEBALL, m_Cheeseball);
 	DDX_Control(pDX, IDC_NUGGET, m_Nugget);
@@ -92,13 +122,12 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CORN_SALAD, m_Corn_salad);
 	DDX_Control(pDX, IDC_CHEESE_STICK, m_Cheese_stick);
 
-
 	//DESSERT
+	DDX_Control(pDX, IDC_DESSERT, m_Dessert);
 	DDX_Control(pDX, IDC_SOFTCON, m_Softcon);
 	DDX_Control(pDX, IDC_CHOCOCON, m_Chococon);
 	DDX_Control(pDX, IDC_WAFFLE, m_Waffle);
 	DDX_Control(pDX, IDC_CHURROS, m_Churros);
-	
 
 	//PAY
 	/*
@@ -127,6 +156,9 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_DRINK, &CMFCApplication5Dlg::OnBnClickedDrink)
 	ON_BN_CLICKED(IDC_SIDE, &CMFCApplication5Dlg::OnBnClickedSide)
 	ON_BN_CLICKED(IDC_DESSERT, &CMFCApplication5Dlg::OnBnClickedDessert)
+	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
+	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCApplication5Dlg::OnBnClickedTakeout)
+	ON_BN_CLICKED(IDC_INSHOP, &CMFCApplication5Dlg::OnBnClickedInshop)
 END_MESSAGE_MAP()
 
 
@@ -186,20 +218,24 @@ void CMFCApplication5Dlg::OnSysCommand(UINT nID, LPARAM lParam)
 void CMFCApplication5Dlg::OnPaint()
 {
 	//MAIN
-	/*
+	
 	CBitmap inshop;
-	inshop.LoadBitmapW(IDB_BITMAP_INSHOP);
+	inshop.LoadBitmapW(IDB_INSHOP);
 	m_Inshop.SetBitmap(inshop);
 
 	CBitmap takeout;
-	takeout.LoadBitmapW(IDB_BITMAP_TAKEOUT);
+	takeout.LoadBitmapW(IDB_TAKEOUT);
 	m_Takeout.SetBitmap(takeout);
-
+	/*
 	CBitmap text;
 	text.LoadBitmapW(IDB_BITMAP_TEXT);
 	m_Text.SetBitmap(text);
 	*/
 	//BURGER
+	CBitmap buger;
+	buger.LoadBitmapW(IDB_BUGER);
+	m_Buger.SetBitmap(buger);
+
 	CBitmap fork;
 	fork.LoadBitmapW(IDB_FORK);
 	m_Fork.SetBitmap(fork);
@@ -225,6 +261,10 @@ void CMFCApplication5Dlg::OnPaint()
 	m_Squid.SetBitmap(squid);
 
 	//DRINK
+	CBitmap drink;
+	drink.LoadBitmapW(IDB_DRINK);
+	m_Drink.SetBitmap(drink);
+
 	CBitmap coke;
 	coke.LoadBitmapW(IDB_COKE);
 	m_Coke.SetBitmap(coke);
@@ -250,6 +290,9 @@ void CMFCApplication5Dlg::OnPaint()
 	m_Coffee.SetBitmap(coffee);
 
 	//SIDE
+	CBitmap side;
+	side.LoadBitmapW(IDB_SIDE);
+	m_Side.SetBitmap(side);
 	
 	CBitmap french_fries;
 	french_fries.LoadBitmapW(IDB_FRENCH_FRIES);
@@ -277,6 +320,9 @@ void CMFCApplication5Dlg::OnPaint()
 	
 
 	//DESSERT
+	CBitmap dessert;
+	dessert.LoadBitmapW(IDB_DESSERT);
+	m_Dessert.SetBitmap(dessert);
 	
 	CBitmap softcon;
 	softcon.LoadBitmapW(IDB_SOFTCON);
@@ -518,3 +564,77 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 
 
 
+
+
+void CMFCApplication5Dlg::OnBnClickedPay()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+
+	m_Fork.ShowWindow(SW_HIDE);
+	m_Shrimp.ShowWindow(SW_HIDE);
+	m_Chicken.ShowWindow(SW_HIDE);
+	m_Chesse.ShowWindow(SW_HIDE);
+	m_Beaf.ShowWindow(SW_HIDE);
+	m_Squid.ShowWindow(SW_HIDE);
+
+	m_Coke.ShowWindow(SW_HIDE);
+	m_Cider.ShowWindow(SW_HIDE);
+	m_Zerocoke.ShowWindow(SW_HIDE);
+	m_Zerocider.ShowWindow(SW_HIDE);
+	m_Milkshake.ShowWindow(SW_HIDE);
+	m_Coffee.ShowWindow(SW_HIDE);
+
+
+	m_French_fries.ShowWindow(SW_HIDE);
+	m_Cheeseball.ShowWindow(SW_HIDE);
+	m_Nugget.ShowWindow(SW_HIDE);
+	m_Coleslaw.ShowWindow(SW_HIDE);
+	m_Corn_salad.ShowWindow(SW_HIDE);
+	m_Cheese_stick.ShowWindow(SW_HIDE);
+
+
+	m_Softcon.ShowWindow(SW_HIDE);
+	m_Chococon.ShowWindow(SW_HIDE);
+	m_Waffle.ShowWindow(SW_HIDE);
+	m_Churros.ShowWindow(SW_HIDE);
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedTakeout()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_Inshop.ShowWindow(SW_HIDE);
+	m_Takeout.ShowWindow(SW_HIDE);
+
+	m_Buger.ShowWindow(SW_SHOW);
+	m_Drink.ShowWindow(SW_SHOW);
+	m_Dessert.ShowWindow(SW_SHOW);
+	m_Side.ShowWindow(SW_SHOW);
+
+	m_Fork.ShowWindow(SW_SHOW);
+	m_Shrimp.ShowWindow(SW_SHOW);
+	m_Chicken.ShowWindow(SW_SHOW);
+	m_Chesse.ShowWindow(SW_SHOW);
+	m_Beaf.ShowWindow(SW_SHOW);
+	m_Squid.ShowWindow(SW_SHOW);
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedInshop()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_Inshop.ShowWindow(SW_HIDE);
+	m_Takeout.ShowWindow(SW_HIDE);
+
+	m_Buger.ShowWindow(SW_SHOW);
+	m_Drink.ShowWindow(SW_SHOW);
+	m_Dessert.ShowWindow(SW_SHOW);
+	m_Side.ShowWindow(SW_SHOW);
+
+	m_Fork.ShowWindow(SW_SHOW);
+	m_Shrimp.ShowWindow(SW_SHOW);
+	m_Chicken.ShowWindow(SW_SHOW);
+	m_Chesse.ShowWindow(SW_SHOW);
+	m_Beaf.ShowWindow(SW_SHOW);
+	m_Squid.ShowWindow(SW_SHOW);
+}

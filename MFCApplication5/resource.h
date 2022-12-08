@@ -31,6 +31,13 @@
 #define IDB_CHOCOCON                    153
 #define IDB_WAFFLE                      154
 #define IDB_CHURROS                     155
+#define IDB_INSHOP                      156
+#define IDB_TAKEOUT                     157
+#define IDB_BUGER                       158
+#define IDB_DRINK                       159
+#define IDB_DESSERT                     160
+#define IDB_BITMAP2                     161
+#define IDB_SIDE                        161
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -57,14 +64,18 @@
 #define IDC_WAFFLE                      1023
 #define IDC_CHURROS                     1024
 #define IDC_CHOCOCON                    1025
+#define IDC_LIST                        1027
+#define IDC_PAY                         1028
+#define IDC_INSHOP                      1029
+#define IDC_TAKEOUT                     1030
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        156
+#define _APS_NEXT_RESOURCE_VALUE        162
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1026
+#define _APS_NEXT_CONTROL_VALUE         1030
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

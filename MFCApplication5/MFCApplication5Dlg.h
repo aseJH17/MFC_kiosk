@@ -33,9 +33,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	//메인
-	/*
+	
 	CButton m_Inshop;
 	CButton m_Takeout;
+	/*
 	CButton m_Text;
 	*/
 	//메뉴
@@ -70,6 +71,7 @@ public:
 	CButton m_Waffle;
 	CButton m_Churros;
 	//결제화면
+	CButton m_Pay;
 	/*
 	CButton m_Card;
 	CButton m_Cash;
@@ -91,4 +93,7 @@ public:
 	afx_msg void OnBnClickedSide();
 	afx_msg void OnBnClickedDessert();
 	
+	afx_msg void OnBnClickedPay();
+	afx_msg void OnBnClickedTakeout();
+	afx_msg void OnBnClickedInshop();
 };

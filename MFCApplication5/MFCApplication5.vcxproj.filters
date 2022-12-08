@@ -131,5 +131,23 @@
     <Image Include="res\churros.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\inshop.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\takeout.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\buger.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\drink.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\dessert.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\side.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
