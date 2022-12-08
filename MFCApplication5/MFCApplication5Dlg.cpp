@@ -85,21 +85,20 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_COFFEE, m_Coffee);
 
 	//SIDE
-	/*
-	DDX_Control(pDX, IDC_FRENCH_FRIES, m_french_fries);
-	DDX_Control(pDX, IDC_CHEESEBALL, m_cheeseball);
-	DDX_Control(pDX, IDC_NUGGET, m_nugget);
-	DDX_Control(pDX, IDC_COLESLAW, m_coleslaw);
-	DDX_Control(pDX, IDC_CORN_SALAD, m_corn_salad);
-	DDX_Control(pDX, IDC_CHEESE_STICK, m_cheese_stick);
-	*/
+	DDX_Control(pDX, IDC_FRENCH_FRIES, m_French_fries);
+	DDX_Control(pDX, IDC_CHEESEBALL, m_Cheeseball);
+	DDX_Control(pDX, IDC_NUGGET, m_Nugget);
+	DDX_Control(pDX, IDC_COLESLAW, m_Coleslaw);
+	DDX_Control(pDX, IDC_CORN_SALAD, m_Corn_salad);
+	DDX_Control(pDX, IDC_CHEESE_STICK, m_Cheese_stick);
+
 
 	//DESSERT
 	/*
 	DDX_Control(pDX, IDC_SOFTCON, m_Softcon);
 	DDX_Control(pDX, IDC_CHOCOCON, m_Chococon);
 	DDX_Control(pDX, IDC_WAFFLE, m_Waffle);
-	DDX_Control(pDX, IDC_CHURROS, m_churros);
+	DDX_Control(pDX, IDC_CHURROS, m_hurros);
 	*/
 
 	//PAY
@@ -252,31 +251,31 @@ void CMFCApplication5Dlg::OnPaint()
 	m_Coffee.SetBitmap(coffee);
 
 	//SIDE
-	/*
+	
 	CBitmap french_fries;
-	softcon.LoadBitmapW(IDB_FRENCH_FRIES);
-	m_Softcon.SetBitmap(french_fries);
-
+	french_fries.LoadBitmapW(IDB_FRENCH_FRIES);
+	m_French_fries.SetBitmap(french_fries);
+	
 	CBitmap cheeseball;
-	chococon.LoadBitmapW(IDB_CHEESEBALL);
-	m_Chococon.SetBitmap(cheeseball);
-
+	cheeseball.LoadBitmapW(IDB_CHEESEBALL);
+	m_Cheeseball.SetBitmap(cheeseball);
+	
 	CBitmap nugget;
-	waffle.LoadBitmapW(IDB_NUGGET);
-	m_Waffle.SetBitmap(nugget);
+	nugget.LoadBitmapW(IDB_NUGGET);
+	m_Nugget.SetBitmap(nugget);
 
 	CBitmap coleslaw;
-	choo.LoadBitmapW(IDB_COLESLAW);
-	m_churros.SetBitmap(coleslaw);
+	coleslaw.LoadBitmapW(IDB_COLESLAW);
+	m_Coleslaw.SetBitmap(coleslaw);
 
 	CBitmap corn_salad;
-	waffle.LoadBitmapW(IDB_CORN_SALAD);
-	m_Waffle.SetBitmap(corn_salad);
+	corn_salad.LoadBitmapW(IDB_CORN_SALAD);
+	m_Corn_salad.SetBitmap(corn_salad);
 
 	CBitmap cheese_stick;
-	choo.LoadBitmapW(IDB_CHEESE_STICK);
-	m_churros.SetBitmap(cheese_stick);
-	*/
+	cheese_stick.LoadBitmapW(IDB_CHEESE_STICK);
+	m_Cheese_stick.SetBitmap(cheese_stick);
+	
 
 	//DESSERT
 	/*
@@ -397,14 +396,15 @@ void CMFCApplication5Dlg::OnBnClickedBuger()
 	m_Milkshake.ShowWindow(SW_HIDE);
 	m_Coffee.ShowWindow(SW_HIDE);
 
-	/*
+	
     m_French_fries.ShowWindow(SW_HIDE);
 	m_Cheeseball.ShowWindow(SW_HIDE);
 	m_Nugget.ShowWindow(SW_HIDE);
 	m_Coleslaw.ShowWindow(SW_HIDE);
 	m_Corn_salad.ShowWindow(SW_HIDE);
-	m_Chees_stick.ShowWindow(SW_HIDE);
+	m_Cheese_stick.ShowWindow(SW_HIDE);
 
+	/*
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
@@ -430,14 +430,15 @@ void CMFCApplication5Dlg::OnBnClickedDrink()
 	m_Milkshake.ShowWindow(SW_SHOW);
 	m_Coffee.ShowWindow(SW_SHOW);
 	
-	/*
+	
 	m_French_fries.ShowWindow(SW_HIDE);
 	m_Cheeseball.ShowWindow(SW_HIDE);
 	m_Nugget.ShowWindow(SW_HIDE);
 	m_Coleslaw.ShowWindow(SW_HIDE);
 	m_Corn_salad.ShowWindow(SW_HIDE);
-	m_Chees_stick.ShowWindow(SW_HIDE);
+	m_Cheese_stick.ShowWindow(SW_HIDE);
 	
+	/*
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
@@ -464,14 +465,15 @@ void CMFCApplication5Dlg::OnBnClickedSide()
 	m_Milkshake.ShowWindow(SW_HIDE);
 	m_Coffee.ShowWindow(SW_HIDE);
 
-	/*
+	
 	m_French_fries.ShowWindow(SW_SHOW);
 	m_Cheeseball.ShowWindow(SW_SHOW);
 	m_Nugget.ShowWindow(SW_SHOW);
 	m_Coleslaw.ShowWindow(SW_SHOW);
 	m_Corn_salad.ShowWindow(SW_SHOW);
-	m_Chees_stick.ShowWindow(SW_SHOW);
+	m_Cheese_stick.ShowWindow(SW_SHOW);
 
+	/*
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
@@ -497,14 +499,15 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 	m_Milkshake.ShowWindow(SW_HIDE);
 	m_Coffee.ShowWindow(SW_HIDE);
 
-	/*
+	
 	m_French_fries.ShowWindow(SW_HIDE);
 	m_Cheeseball.ShowWindow(SW_HIDE);
 	m_Nugget.ShowWindow(SW_HIDE);
 	m_Coleslaw.ShowWindow(SW_HIDE);
 	m_Corn_salad.ShowWindow(SW_HIDE);
-	m_Chees_stick.ShowWindow(SW_HIDE); 
+	m_Cheese_stick.ShowWindow(SW_HIDE); 
 	
+	/*
 	m_Softcon.ShowWindow(SW_SHOW);
 	m_Chococon.ShowWindow(SW_SHOW);
 	m_Waffle.ShowWindow(SW_SHOW);

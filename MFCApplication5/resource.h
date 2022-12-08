@@ -21,6 +21,13 @@
 #define IDB_TANSAN                      141
 #define IDB_ZEROCIDER                   142
 #define IDB_ZEROCOKE                    143
+#define IDB_FRENCH_FRIES                146
+#define IDB_CHEESEBALL                  147
+#define IDB_NUGGET                      148
+#define IDB_COLESLAW                    149
+#define IDB_CORN_SALAD                  150
+#define IDB_CHEESESTICK                 151
+#define IDB_CHEESE_STICK                151
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -37,14 +44,20 @@
 #define IDC_ZEROCIDER                   1013
 #define IDC_MILKSHAKE                   1014
 #define IDC_COFFEE                      1015
+#define IDC_FRENCH_FRIES                1016
+#define IDC_CHEESEBALL                  1017
+#define IDC_NUGGET                      1018
+#define IDC_COLESLAW                    1019
+#define IDC_CORN_SALAD                  1020
+#define IDC_CHEESE_STICK                1021
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        146
+#define _APS_NEXT_RESOURCE_VALUE        152
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1016
+#define _APS_NEXT_CONTROL_VALUE         1017
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

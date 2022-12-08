@@ -58,14 +58,12 @@ public:
 	CButton m_Milkshake;
 	CButton m_Coffee;
 	//사이드
-	/*
 	CButton m_French_fries;
 	CButton m_Cheeseball;
 	CButton m_Nugget;
 	CButton m_Coleslaw;
 	CButton m_Corn_salad;
-	CButton m_Chees_stick;
-	*/
+	CButton m_Cheese_stick;
 	//디저트
 	/*
 	CButton m_Softcon;

@@ -208,14 +208,20 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\americano.bmp" />
+    <Image Include="res\cheeseball.bmp" />
+    <Image Include="res\cheesestick.bmp" />
     <Image Include="res\chesse.bmp" />
     <Image Include="res\chicken.bmp" />
     <Image Include="res\CIDER.bmp" />
     <Image Include="res\COKE.bmp" />
+    <Image Include="res\coleslaw.bmp" />
+    <Image Include="res\corn_salad.bmp" />
     <Image Include="res\double.bmp" />
     <Image Include="res\FORK.bmp" />
+    <Image Include="res\french_fries.bmp" />
     <Image Include="res\MFCApplication5.ico" />
     <Image Include="res\MILKSHAKE.bmp" />
+    <Image Include="res\nugget.bmp" />
     <Image Include="res\ORANGE.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
     <Image Include="res\squid.bmp" />

@@ -101,5 +101,23 @@
     <Image Include="res\ZEROCOKE.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\french_fries.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\cheeseball.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\nugget.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\coleslaw.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\corn_salad.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\cheesestick.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
