@@ -149,5 +149,11 @@
     <Image Include="res\side.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\pay.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\back.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

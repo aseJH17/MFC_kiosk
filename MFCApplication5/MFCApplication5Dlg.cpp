@@ -88,7 +88,6 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	GetDlgItem(IDC_WAFFLE)->ShowWindow(SW_HIDE);
 	GetDlgItem(IDC_CHURROS)->ShowWindow(SW_HIDE);
 
-	
 	DDX_Control(pDX, IDC_INSHOP, m_Inshop);
 	DDX_Control(pDX, IDC_TAKEOUT, m_Takeout);
 	/*
@@ -130,6 +129,8 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHURROS, m_Churros);
 
 	//PAY
+	DDX_Control(pDX, IDC_PAY, m_Pay);
+	DDX_Control(pDX, IDC_BACK, m_Back);
 	/*
 	DDX_Control(pDX, IDC_POINT, m_Point);
 	DDX_Control(pDX, IDC_NO, m_No);
@@ -159,6 +160,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
 	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCApplication5Dlg::OnBnClickedTakeout)
 	ON_BN_CLICKED(IDC_INSHOP, &CMFCApplication5Dlg::OnBnClickedInshop)
+	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
 END_MESSAGE_MAP()
 
 
@@ -342,6 +344,13 @@ void CMFCApplication5Dlg::OnPaint()
 	
 
 	//PAY
+	CBitmap pay;
+	pay.LoadBitmapW(IDB_PAY);
+	m_Pay.SetBitmap(pay);
+
+	CBitmap back;
+	back.LoadBitmapW(IDB_BACK);
+	m_Back.SetBitmap(back);
 	/*
 	CBitmap point;
 	point.LoadBitmapW(IDB_BITMAP_POINT);
@@ -570,6 +579,13 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 
+	m_Pay.ShowWindow(SW_HIDE);
+
+	m_Buger.ShowWindow(SW_HIDE);
+	m_Drink.ShowWindow(SW_HIDE);
+	m_Dessert.ShowWindow(SW_HIDE);
+	m_Side.ShowWindow(SW_HIDE);
+
 	m_Fork.ShowWindow(SW_HIDE);
 	m_Shrimp.ShowWindow(SW_HIDE);
 	m_Chicken.ShowWindow(SW_HIDE);
@@ -597,6 +613,8 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
 	m_Churros.ShowWindow(SW_HIDE);
+
+	m_Back.ShowWindow(SW_SHOW);
 }
 
 
@@ -605,6 +623,8 @@ void CMFCApplication5Dlg::OnBnClickedTakeout()
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	m_Inshop.ShowWindow(SW_HIDE);
 	m_Takeout.ShowWindow(SW_HIDE);
+
+	m_Pay.ShowWindow(SW_SHOW);
 
 	m_Buger.ShowWindow(SW_SHOW);
 	m_Drink.ShowWindow(SW_SHOW);
@@ -626,6 +646,8 @@ void CMFCApplication5Dlg::OnBnClickedInshop()
 	m_Inshop.ShowWindow(SW_HIDE);
 	m_Takeout.ShowWindow(SW_HIDE);
 
+	m_Pay.ShowWindow(SW_SHOW);
+
 	m_Buger.ShowWindow(SW_SHOW);
 	m_Drink.ShowWindow(SW_SHOW);
 	m_Dessert.ShowWindow(SW_SHOW);
@@ -637,4 +659,48 @@ void CMFCApplication5Dlg::OnBnClickedInshop()
 	m_Chesse.ShowWindow(SW_SHOW);
 	m_Beaf.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
+}
+
+
+
+
+void CMFCApplication5Dlg::OnBnClickedBack()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_Pay.ShowWindow(SW_SHOW);
+
+	m_Buger.ShowWindow(SW_SHOW);
+	m_Drink.ShowWindow(SW_SHOW);
+	m_Dessert.ShowWindow(SW_SHOW);
+	m_Side.ShowWindow(SW_SHOW);
+
+	m_Fork.ShowWindow(SW_SHOW);
+	m_Shrimp.ShowWindow(SW_SHOW);
+	m_Chicken.ShowWindow(SW_SHOW);
+	m_Chesse.ShowWindow(SW_SHOW);
+	m_Beaf.ShowWindow(SW_SHOW);
+	m_Squid.ShowWindow(SW_SHOW);
+
+	m_Coke.ShowWindow(SW_HIDE);
+	m_Cider.ShowWindow(SW_HIDE);
+	m_Zerocoke.ShowWindow(SW_HIDE);
+	m_Zerocider.ShowWindow(SW_HIDE);
+	m_Milkshake.ShowWindow(SW_HIDE);
+	m_Coffee.ShowWindow(SW_HIDE);
+
+
+	m_French_fries.ShowWindow(SW_HIDE);
+	m_Cheeseball.ShowWindow(SW_HIDE);
+	m_Nugget.ShowWindow(SW_HIDE);
+	m_Coleslaw.ShowWindow(SW_HIDE);
+	m_Corn_salad.ShowWindow(SW_HIDE);
+	m_Cheese_stick.ShowWindow(SW_HIDE);
+
+
+	m_Softcon.ShowWindow(SW_HIDE);
+	m_Chococon.ShowWindow(SW_HIDE);
+	m_Waffle.ShowWindow(SW_HIDE);
+	m_Churros.ShowWindow(SW_HIDE);
+
+	m_Back.ShowWindow(SW_HIDE);
 }

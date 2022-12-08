@@ -208,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\americano.bmp" />
+    <Image Include="res\back.bmp" />
     <Image Include="res\buger.bmp" />
     <Image Include="res\cheeseball.bmp" />
     <Image Include="res\cheesestick.bmp" />
@@ -229,6 +230,7 @@
     <Image Include="res\MILKSHAKE.bmp" />
     <Image Include="res\nugget.bmp" />
     <Image Include="res\ORANGE.bmp" />
+    <Image Include="res\pay.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
     <Image Include="res\side.bmp" />
     <Image Include="res\softcon.bmp" />
