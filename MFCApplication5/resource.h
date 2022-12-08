@@ -30,7 +30,6 @@
 #define IDB_SOFTCON                     152
 #define IDB_CHOCOCON                    153
 #define IDB_WAFFLE                      154
-#define IDB_BITMAP2                     155
 #define IDB_CHURROS                     155
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
