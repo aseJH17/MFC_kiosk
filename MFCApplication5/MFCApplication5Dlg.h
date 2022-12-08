@@ -65,12 +65,10 @@ public:
 	CButton m_Corn_salad;
 	CButton m_Cheese_stick;
 	//디저트
-	/*
 	CButton m_Softcon;
 	CButton m_Chococon;
 	CButton m_Waffle;
 	CButton m_Churros;
-	*/
 	//결제화면
 	/*
 	CButton m_Card;

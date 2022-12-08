@@ -119,5 +119,17 @@
     <Image Include="res\cheesestick.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\softcon.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\chococon.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\waffle.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\churros.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

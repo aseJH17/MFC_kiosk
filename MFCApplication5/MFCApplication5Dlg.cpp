@@ -94,12 +94,11 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 
 
 	//DESSERT
-	/*
 	DDX_Control(pDX, IDC_SOFTCON, m_Softcon);
 	DDX_Control(pDX, IDC_CHOCOCON, m_Chococon);
 	DDX_Control(pDX, IDC_WAFFLE, m_Waffle);
-	DDX_Control(pDX, IDC_CHURROS, m_hurros);
-	*/
+	DDX_Control(pDX, IDC_CHURROS, m_Churros);
+	
 
 	//PAY
 	/*
@@ -278,7 +277,7 @@ void CMFCApplication5Dlg::OnPaint()
 	
 
 	//DESSERT
-	/*
+	
 	CBitmap softcon;
 	softcon.LoadBitmapW(IDB_SOFTCON);
 	m_Softcon.SetBitmap(softcon);
@@ -292,9 +291,9 @@ void CMFCApplication5Dlg::OnPaint()
 	m_Waffle.SetBitmap(waffle);
 
 	CBitmap churros;
-	choo.LoadBitmapW(IDB_CHURROS);
-	m_churros.SetBitmap(churros);
-	*/
+	churros.LoadBitmapW(IDB_CHURROS);
+	m_Churros.SetBitmap(churros);
+	
 
 	//PAY
 	/*
@@ -404,12 +403,12 @@ void CMFCApplication5Dlg::OnBnClickedBuger()
 	m_Corn_salad.ShowWindow(SW_HIDE);
 	m_Cheese_stick.ShowWindow(SW_HIDE);
 
-	/*
+	
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
 	m_Churros.ShowWindow(SW_HIDE);
-	*/
+	
 }
 
 
@@ -438,12 +437,12 @@ void CMFCApplication5Dlg::OnBnClickedDrink()
 	m_Corn_salad.ShowWindow(SW_HIDE);
 	m_Cheese_stick.ShowWindow(SW_HIDE);
 	
-	/*
+	
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
 	m_Churros.ShowWindow(SW_HIDE);
-	*/
+	
 	
 }
 
@@ -473,12 +472,12 @@ void CMFCApplication5Dlg::OnBnClickedSide()
 	m_Corn_salad.ShowWindow(SW_SHOW);
 	m_Cheese_stick.ShowWindow(SW_SHOW);
 
-	/*
+	
 	m_Softcon.ShowWindow(SW_HIDE);
 	m_Chococon.ShowWindow(SW_HIDE);
 	m_Waffle.ShowWindow(SW_HIDE);
 	m_Churros.ShowWindow(SW_HIDE);	
-	*/
+	
 }
 
 
@@ -507,12 +506,12 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 	m_Corn_salad.ShowWindow(SW_HIDE);
 	m_Cheese_stick.ShowWindow(SW_HIDE); 
 	
-	/*
+	
 	m_Softcon.ShowWindow(SW_SHOW);
 	m_Chococon.ShowWindow(SW_SHOW);
 	m_Waffle.ShowWindow(SW_SHOW);
 	m_Churros.ShowWindow(SW_SHOW);
-	*/
+	
 }
 
 //결제화면코드

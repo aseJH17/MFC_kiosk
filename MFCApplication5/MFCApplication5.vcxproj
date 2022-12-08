@@ -212,6 +212,8 @@
     <Image Include="res\cheesestick.bmp" />
     <Image Include="res\chesse.bmp" />
     <Image Include="res\chicken.bmp" />
+    <Image Include="res\chococon.bmp" />
+    <Image Include="res\churros.bmp" />
     <Image Include="res\CIDER.bmp" />
     <Image Include="res\COKE.bmp" />
     <Image Include="res\coleslaw.bmp" />
@@ -224,8 +226,10 @@
     <Image Include="res\nugget.bmp" />
     <Image Include="res\ORANGE.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
+    <Image Include="res\softcon.bmp" />
     <Image Include="res\squid.bmp" />
     <Image Include="res\tansan.bmp" />
+    <Image Include="res\waffle.bmp" />
     <Image Include="res\ZEROCIDER.bmp" />
     <Image Include="res\ZEROCOKE.bmp" />
   </ItemGroup>
