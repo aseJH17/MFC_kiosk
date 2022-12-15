@@ -84,10 +84,10 @@ public:
 	*/
 
 	//메인화면
-	/*
+	
 	afx_msg void OnBnClickedTakeout();
 	afx_msg void OnBnClickedInshop();
-	*/
+	
 	//주문화면
 	afx_msg void OnBnClickedBuger();
 	afx_msg void OnBnClickedDrink();
@@ -95,7 +95,5 @@ public:
 	afx_msg void OnBnClickedDessert();
 	
 	afx_msg void OnBnClickedPay();
-	afx_msg void OnBnClickedTakeout();
-	afx_msg void OnBnClickedInshop();
 	afx_msg void OnBnClickedBack();
 };
