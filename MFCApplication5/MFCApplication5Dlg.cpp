@@ -416,26 +416,6 @@ HCURSOR CMFCApplication5Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-//메인화면 코드
-/*
-void CMFCHomeDlg::OnBnClickedTakeout()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	m_Takeout.ShowWindow(SW_HIDE);
-	m_Inshop.ShowWindow(SW_HIDE);
-	m_Text.ShowWindow(SW_HIDE);
-
-}
-
-
-void CMFCHomeDlg::OnBnClickedInshop()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	m_Takeout.ShowWindow(SW_HIDE);
-	m_Inshop.ShowWindow(SW_HIDE);
-	m_Text.ShowWindow(SW_HIDE);
-}
-*/
 
 //주문화면 코드
 void CMFCApplication5Dlg::OnBnClickedBuger()
@@ -575,10 +555,6 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 }
 
 //결제화면코드
-
-
-
-
 
 void CMFCApplication5Dlg::OnBnClickedPay()
 {

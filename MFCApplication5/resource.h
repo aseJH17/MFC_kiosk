@@ -45,7 +45,6 @@
 #define IDB_COUPON                      168
 #define IDB_TEXT1                       169
 #define IDB_CASH                        170
-#define IDB_BITMAP1                     172
 #define IDB_NO                          172
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
