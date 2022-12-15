@@ -210,6 +210,8 @@
     <Image Include="res\americano.bmp" />
     <Image Include="res\back.bmp" />
     <Image Include="res\buger.bmp" />
+    <Image Include="res\Card.bmp" />
+    <Image Include="res\Cash.bmp" />
     <Image Include="res\cheeseball.bmp" />
     <Image Include="res\cheesestick.bmp" />
     <Image Include="res\chesse.bmp" />
@@ -220,6 +222,7 @@
     <Image Include="res\COKE.bmp" />
     <Image Include="res\coleslaw.bmp" />
     <Image Include="res\corn_salad.bmp" />
+    <Image Include="res\Coupon.bmp" />
     <Image Include="res\dessert.bmp" />
     <Image Include="res\double.bmp" />
     <Image Include="res\drink.bmp" />
@@ -228,15 +231,19 @@
     <Image Include="res\inshop.bmp" />
     <Image Include="res\MFCApplication5.ico" />
     <Image Include="res\MILKSHAKE.bmp" />
+    <Image Include="res\No.bmp" />
     <Image Include="res\nugget.bmp" />
     <Image Include="res\ORANGE.bmp" />
     <Image Include="res\pay.bmp" />
+    <Image Include="res\Point.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
     <Image Include="res\side.bmp" />
     <Image Include="res\softcon.bmp" />
     <Image Include="res\squid.bmp" />
     <Image Include="res\takeout.bmp" />
     <Image Include="res\tansan.bmp" />
+    <Image Include="res\text1.bmp" />
+    <Image Include="res\text2.bmp" />
     <Image Include="res\waffle.bmp" />
     <Image Include="res\ZEROCIDER.bmp" />
     <Image Include="res\ZEROCOKE.bmp" />

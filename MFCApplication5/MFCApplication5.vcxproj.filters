@@ -155,5 +155,26 @@
     <Image Include="res\back.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\Point.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Card.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\text2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Coupon.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\text1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Cash.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\No.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

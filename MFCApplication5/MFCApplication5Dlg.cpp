@@ -88,6 +88,14 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	GetDlgItem(IDC_WAFFLE)->ShowWindow(SW_HIDE);
 	GetDlgItem(IDC_CHURROS)->ShowWindow(SW_HIDE);
 
+	GetDlgItem(IDC_NO)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CASH)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_POINT)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_COUPON)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_CARD)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_TEXT1)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_TEXT2)->ShowWindow(SW_HIDE);
+
 	DDX_Control(pDX, IDC_INSHOP, m_Inshop);
 	DDX_Control(pDX, IDC_TAKEOUT, m_Takeout);
 	/*
@@ -131,7 +139,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	//PAY
 	DDX_Control(pDX, IDC_PAY, m_Pay);
 	DDX_Control(pDX, IDC_BACK, m_Back);
-	/*
+	
 	DDX_Control(pDX, IDC_POINT, m_Point);
 	DDX_Control(pDX, IDC_NO, m_No);
 	DDX_Control(pDX, IDC_CARD, m_Card);
@@ -139,7 +147,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CASH, m_Cash);
 	DDX_Control(pDX, IDC_TEXT1, m_Text1);
 	DDX_Control(pDX, IDC_TEXT2, m_Text2);
-	*/
+	
 
 }
 
@@ -148,18 +156,16 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//메인화면
-	/*
-	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCHomeDlg::OnBnClickedTakeout)
-	ON_BN_CLICKED(IDC_INSHOP, &CMFCHomeDlg::OnBnClickedInshop)
-	*/
+	
+	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCApplication5Dlg::OnBnClickedTakeout)
+	ON_BN_CLICKED(IDC_INSHOP, &CMFCApplication5Dlg::OnBnClickedInshop)
+	
 	//주문화면
 	ON_BN_CLICKED(IDC_BUGER, &CMFCApplication5Dlg::OnBnClickedBuger)
 	ON_BN_CLICKED(IDC_DRINK, &CMFCApplication5Dlg::OnBnClickedDrink)
 	ON_BN_CLICKED(IDC_SIDE, &CMFCApplication5Dlg::OnBnClickedSide)
 	ON_BN_CLICKED(IDC_DESSERT, &CMFCApplication5Dlg::OnBnClickedDessert)
 	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
-	ON_BN_CLICKED(IDC_TAKEOUT, &CMFCApplication5Dlg::OnBnClickedTakeout)
-	ON_BN_CLICKED(IDC_INSHOP, &CMFCApplication5Dlg::OnBnClickedInshop)
 	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
 END_MESSAGE_MAP()
 
@@ -351,36 +357,35 @@ void CMFCApplication5Dlg::OnPaint()
 	CBitmap back;
 	back.LoadBitmapW(IDB_BACK);
 	m_Back.SetBitmap(back);
-	/*
+	
 	CBitmap point;
-	point.LoadBitmapW(IDB_BITMAP_POINT);
+	point.LoadBitmapW(IDB_POINT);
 	m_Point.SetBitmap(point);
 
 	CBitmap no;
-	no.LoadBitmapW(IDB_BITMAP_NO);
+	no.LoadBitmapW(IDB_NO);
 	m_No.SetBitmap(no);
 
-
 	CBitmap card;
-	card.LoadBitmapW(IDB_BITMAP_CARD);
+	card.LoadBitmapW(IDB_CARD);
 	m_Card.SetBitmap(card);
 
 	CBitmap coupon;
-	coupon.LoadBitmapW(IDB_BITMAP_COUPON);
+	coupon.LoadBitmapW(IDB_COUPON);
 	m_Coupon.SetBitmap(coupon);
 
 	CBitmap cash;
-	cash.LoadBitmapW(IDB_BITMAP_CASH);
+	cash.LoadBitmapW(IDB_CASH);
 	m_Cash.SetBitmap(cash);
 
 	CBitmap text1;
-	text1.LoadBitmapW(IDB_BITMAP_TEXT1);
+	text1.LoadBitmapW(IDB_TEXT1);
 	m_Text1.SetBitmap(text1);
 
 	CBitmap text2;
-	text2.LoadBitmapW(IDB_BITMAP_TEXT2);
+	text2.LoadBitmapW(IDB_TEXT2);
 	m_Text2.SetBitmap(text2);
-	*/
+	
 	if (IsIconic())
 	{
 		CPaintDC dc(this); // 그리기를 위한 디바이스 컨텍스트입니다.
@@ -615,6 +620,14 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 	m_Churros.ShowWindow(SW_HIDE);
 
 	m_Back.ShowWindow(SW_SHOW);
+
+	m_Card.ShowWindow(SW_SHOW);
+	m_Cash.ShowWindow(SW_SHOW);
+	m_Coupon.ShowWindow(SW_SHOW);
+	m_Point.ShowWindow(SW_SHOW);
+	m_No.ShowWindow(SW_SHOW);
+	m_Text1.ShowWindow(SW_SHOW);
+	m_Text2.ShowWindow(SW_SHOW);
 }
 
 
@@ -703,4 +716,11 @@ void CMFCApplication5Dlg::OnBnClickedBack()
 	m_Churros.ShowWindow(SW_HIDE);
 
 	m_Back.ShowWindow(SW_HIDE);
+	m_Card.ShowWindow(SW_HIDE);
+	m_Cash.ShowWindow(SW_HIDE);
+	m_Coupon.ShowWindow(SW_HIDE);
+	m_No.ShowWindow(SW_HIDE);
+	m_Text1.ShowWindow(SW_HIDE);
+	m_Text2.ShowWindow(SW_HIDE);
+	m_Point.ShowWindow(SW_HIDE);
 }

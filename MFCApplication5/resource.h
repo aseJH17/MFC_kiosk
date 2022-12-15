@@ -39,6 +39,14 @@
 #define IDB_SIDE                        161
 #define IDB_PAY                         162
 #define IDB_BACK                        164
+#define IDB_POINT                       165
+#define IDB_CARD                        166
+#define IDB_TEXT2                       167
+#define IDB_COUPON                      168
+#define IDB_TEXT1                       169
+#define IDB_CASH                        170
+#define IDB_BITMAP1                     172
+#define IDB_NO                          172
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -70,14 +78,21 @@
 #define IDC_INSHOP                      1029
 #define IDC_TAKEOUT                     1030
 #define IDC_BACK                        1032
+#define IDC_CARD                        1033
+#define IDC_COUPON                      1035
+#define IDC_CASH                        1036
+#define IDC_POINT                       1037
+#define IDC_TEXT1                       1038
+#define IDC_TEXT2                       1039
+#define IDC_NO                          1040
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        165
+#define _APS_NEXT_RESOURCE_VALUE        173
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1033
+#define _APS_NEXT_CONTROL_VALUE         1041
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

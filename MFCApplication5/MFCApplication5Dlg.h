@@ -73,29 +73,26 @@ public:
 	//결제화면
 	CButton m_Pay;
 	CButton m_Back;
-	/*
 	CButton m_Card;
 	CButton m_Cash;
 	CButton m_Coupon;
 	CButton m_No;
 	CButton m_Point;
 	CButton m_Text1;
-	CButton m_Text2;
-	*/
+	CButton m_Text2;	
 
 	//메인화면
-	/*
+	
 	afx_msg void OnBnClickedTakeout();
 	afx_msg void OnBnClickedInshop();
-	*/
+	
 	//주문화면
 	afx_msg void OnBnClickedBuger();
 	afx_msg void OnBnClickedDrink();
 	afx_msg void OnBnClickedSide();
 	afx_msg void OnBnClickedDessert();
 	
+	//결제화면
 	afx_msg void OnBnClickedPay();
-	afx_msg void OnBnClickedTakeout();
-	afx_msg void OnBnClickedInshop();
 	afx_msg void OnBnClickedBack();
 };
