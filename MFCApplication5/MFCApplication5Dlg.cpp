@@ -7,6 +7,7 @@
 #include "MFCApplication5.h"
 #include "MFCApplication5Dlg.h"
 #include "afxdialogex.h"
+#include "NewDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -167,6 +168,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_DESSERT, &CMFCApplication5Dlg::OnBnClickedDessert)
 	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
 	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
+	ON_BN_CLICKED(IDC_FORK, &CMFCApplication5Dlg::OnBnClickedFork)
 END_MESSAGE_MAP()
 
 
@@ -699,4 +701,12 @@ void CMFCApplication5Dlg::OnBnClickedBack()
 	m_Text1.ShowWindow(SW_HIDE);
 	m_Text2.ShowWindow(SW_HIDE);
 	m_Point.ShowWindow(SW_HIDE);
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedFork()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	 NewDialog dlg;
+	 dlg.DoModal();
 }

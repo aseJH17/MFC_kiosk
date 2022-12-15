@@ -95,4 +95,5 @@ public:
 	//결제화면
 	afx_msg void OnBnClickedPay();
 	afx_msg void OnBnClickedBack();
+	afx_msg void OnBnClickedFork();
 };

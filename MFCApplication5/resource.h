@@ -46,6 +46,7 @@
 #define IDB_TEXT1                       169
 #define IDB_CASH                        170
 #define IDB_NO                          172
+#define IDD_DIALOG1                     175
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -84,14 +85,17 @@
 #define IDC_TEXT1                       1038
 #define IDC_TEXT2                       1039
 #define IDC_NO                          1040
+#define IDC_SET                         1042
+#define IDC_BUTTON2                     1043
+#define IDC_SOLO                        1043
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        173
+#define _APS_NEXT_RESOURCE_VALUE        177
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1041
+#define _APS_NEXT_CONTROL_VALUE         1043
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
