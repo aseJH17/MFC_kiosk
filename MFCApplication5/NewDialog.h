@@ -23,4 +23,10 @@ protected:
 public:
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton1();
+
+	CButton m_Solo;
+	CButton m_Set;
+	CButton m_Bul_burger;
+
+	afx_msg void OnPaint();
 };

@@ -182,5 +182,14 @@
     <Image Include="res\No.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="res\bul_burger.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\set.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\solo.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

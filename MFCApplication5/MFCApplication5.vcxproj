@@ -212,6 +212,7 @@
     <Image Include="res\americano.bmp" />
     <Image Include="res\back.bmp" />
     <Image Include="res\buger.bmp" />
+    <Image Include="res\bul_burger.bmp" />
     <Image Include="res\Card.bmp" />
     <Image Include="res\Cash.bmp" />
     <Image Include="res\cheeseball.bmp" />
@@ -238,9 +239,11 @@
     <Image Include="res\ORANGE.bmp" />
     <Image Include="res\pay.bmp" />
     <Image Include="res\Point.bmp" />
+    <Image Include="res\set.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
     <Image Include="res\side.bmp" />
     <Image Include="res\softcon.bmp" />
+    <Image Include="res\solo.bmp" />
     <Image Include="res\squid.bmp" />
     <Image Include="res\takeout.bmp" />
     <Image Include="res\tansan.bmp" />
