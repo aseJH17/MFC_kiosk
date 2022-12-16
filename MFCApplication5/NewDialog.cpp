@@ -35,15 +35,18 @@ void NewDialog::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(NewDialog, CDialogEx)
+	ON_WM_SYSCOMMAND()
+	ON_WM_PAINT()
+	ON_WM_QUERYDRAGICON()
+
 	ON_BN_CLICKED(IDC_SET, &NewDialog::OnBnClickedButton2)
 	ON_BN_CLICKED(IDC_SOLO, &NewDialog::OnBnClickedButton1)
-	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 
 // NewDialog 메시지 처리기
 
-
+/*
 void NewDialog::OnBnClickedButton2()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -54,9 +57,10 @@ void NewDialog::OnBnClickedButton2()
 void NewDialog::OnBnClickedButton1()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+
 	CDialogEx::OnOK();
 }
-
+*/
 
 void NewDialog::OnPaint()
 {

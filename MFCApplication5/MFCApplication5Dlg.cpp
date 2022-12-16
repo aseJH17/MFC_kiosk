@@ -169,6 +169,7 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_DESSERT, &CMFCApplication5Dlg::OnBnClickedDessert)
 	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
 	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
+
 	ON_BN_CLICKED(IDC_FORK, &CMFCApplication5Dlg::OnBnClickedFork)
 	/*
 	ON_BN_CLICKED(IDC_SHRIMP, &CMFCApplication5Dlg::OnBnClickedShrimp)
@@ -735,8 +736,20 @@ void CMFCApplication5Dlg::OnBnClickedFork()
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"불고기 버거 ");
-	m_listOrder.AddString(L"불고기 버거");
+	m_strOrder.Append(L"불고기버거");
+	m_listOrder.AddString(L"불고기버거");
+
+}
+
+void NewDialog::OnBnClickedButton1() 
+{
+	CDialogEx::OnOK();
+}
+
+void NewDialog::OnBnClickedButton2()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CDialogEx::OnOK();
 }
 
 /*

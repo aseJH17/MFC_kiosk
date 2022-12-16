@@ -28,5 +28,9 @@ public:
 	CButton m_Set;
 	CButton m_Bul_burger;
 
+	CString m_strOrder;
+
 	afx_msg void OnPaint();
+
+	CListBox m_listOrder;
 };
