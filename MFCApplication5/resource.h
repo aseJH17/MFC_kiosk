@@ -10,7 +10,6 @@
 #define IDB_CHESSE                      130
 #define IDB_CHICKEN                     131
 #define IDB_BEAF                        132
-#define IDB_FORK                        133
 #define IDB_SHRIMP                      134
 #define IDB_SQUID                       135
 #define IDB_COFFEE                      136
@@ -60,6 +59,9 @@
 #define IDB_DOUBLE_BUGER                192
 #define IDB_SHIRIMP_BUGER               193
 #define IDB_SQUID_BUGER                 194
+#define IDB_DOUBLE                      208
+#define IDB_BITMAP1                     210
+#define IDB_FORK                        210
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -106,13 +108,12 @@
 #define IDC_CHICKEN_BUGER               1047
 #define IDC_DOUBLE_BUGER                1048
 #define IDC_SQUID_BUGER                 1049
-#define IDC_FORK_SOLO                   1050
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        206
+#define _APS_NEXT_RESOURCE_VALUE        211
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101

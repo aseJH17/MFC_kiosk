@@ -50,7 +50,7 @@ public:
 	CButton m_Shrimp;
 	CButton m_Chicken;
 	CButton m_Chesse;
-	CButton m_Beaf;
+	CButton m_Double;
 	CButton m_Squid;
 	//음료
 	CButton m_Coke;
@@ -120,5 +120,5 @@ public:
 	afx_msg void OnBnClickedChococon();
 	afx_msg void OnBnClickedChurros();
 	
-	afx_msg void OnBnClickedForkSolo();
+	afx_msg void OnBnClickedText1();
 };

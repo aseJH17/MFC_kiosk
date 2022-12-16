@@ -115,7 +115,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_SHRIMP, m_Shrimp);
 	DDX_Control(pDX, IDC_CHICKEN, m_Chicken);
 	DDX_Control(pDX, IDC_CHESSE, m_Chesse);
-	DDX_Control(pDX, IDC_BEAF, m_Beaf);
+	DDX_Control(pDX, IDC_BEAF, m_Double);
 	DDX_Control(pDX, IDC_SQUID, m_Squid);
 
 	//DRINK
@@ -198,7 +198,8 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_CHOCOCON, &CMFCApplication5Dlg::OnBnClickedChococon)
 	ON_BN_CLICKED(IDC_CHURROS, &CMFCApplication5Dlg::OnBnClickedChurros)
 	
-	ON_BN_CLICKED(IDC_FORK_SOLO, &CMFCApplication5Dlg::OnBnClickedForkSolo)
+	
+	ON_BN_CLICKED(IDC_TEXT1, &CMFCApplication5Dlg::OnBnClickedText1)
 END_MESSAGE_MAP()
 
 
@@ -292,9 +293,9 @@ void CMFCApplication5Dlg::OnPaint()
 	chesse.LoadBitmapW(IDB_CHESSE);
 	m_Chesse.SetBitmap(chesse);
 
-	CBitmap beaf;
-	beaf.LoadBitmapW(IDB_BEAF);
-	m_Beaf.SetBitmap(beaf);
+	CBitmap double_b;
+	double_b.LoadBitmapW(IDB_DOUBLE);
+	m_Double.SetBitmap(double_b);
 
 	CBitmap squid;
 	squid.LoadBitmapW(IDB_SQUID);
@@ -457,7 +458,7 @@ void CMFCApplication5Dlg::OnBnClickedBuger()
 	m_Shrimp.ShowWindow(SW_SHOW);
 	m_Chicken.ShowWindow(SW_SHOW);
 	m_Chesse.ShowWindow(SW_SHOW);
-	m_Beaf.ShowWindow(SW_SHOW);
+	m_Double.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
 
 	m_Coke.ShowWindow(SW_HIDE);
@@ -491,7 +492,7 @@ void CMFCApplication5Dlg::OnBnClickedDrink()
 	m_Shrimp.ShowWindow(SW_HIDE);
 	m_Chicken.ShowWindow(SW_HIDE);
 	m_Chesse.ShowWindow(SW_HIDE);
-	m_Beaf.ShowWindow(SW_HIDE);
+	m_Double.ShowWindow(SW_HIDE);
 	m_Squid.ShowWindow(SW_HIDE);
 
 	m_Coke.ShowWindow(SW_SHOW);
@@ -526,7 +527,7 @@ void CMFCApplication5Dlg::OnBnClickedSide()
 	m_Shrimp.ShowWindow(SW_HIDE);
 	m_Chicken.ShowWindow(SW_HIDE);
 	m_Chesse.ShowWindow(SW_HIDE);
-	m_Beaf.ShowWindow(SW_HIDE);
+	m_Double.ShowWindow(SW_HIDE);
 	m_Squid.ShowWindow(SW_HIDE);
 
 	m_Coke.ShowWindow(SW_HIDE);
@@ -560,7 +561,7 @@ void CMFCApplication5Dlg::OnBnClickedDessert()
 	m_Shrimp.ShowWindow(SW_HIDE);
 	m_Chicken.ShowWindow(SW_HIDE);
 	m_Chesse.ShowWindow(SW_HIDE);
-	m_Beaf.ShowWindow(SW_HIDE);
+	m_Double.ShowWindow(SW_HIDE);
 	m_Squid.ShowWindow(SW_HIDE);
 
 	m_Coke.ShowWindow(SW_HIDE);
@@ -603,7 +604,7 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 	m_Shrimp.ShowWindow(SW_HIDE);
 	m_Chicken.ShowWindow(SW_HIDE);
 	m_Chesse.ShowWindow(SW_HIDE);
-	m_Beaf.ShowWindow(SW_HIDE);
+	m_Double.ShowWindow(SW_HIDE);
 	m_Squid.ShowWindow(SW_HIDE);
 
 	m_Coke.ShowWindow(SW_HIDE);
@@ -636,6 +637,8 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 	m_No.ShowWindow(SW_SHOW);
 	m_Text1.ShowWindow(SW_SHOW);
 	m_Text2.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_HIDE);
 }
 
 
@@ -656,8 +659,10 @@ void CMFCApplication5Dlg::OnBnClickedTakeout()
 	m_Shrimp.ShowWindow(SW_SHOW);
 	m_Chicken.ShowWindow(SW_SHOW);
 	m_Chesse.ShowWindow(SW_SHOW);
-	m_Beaf.ShowWindow(SW_SHOW);
+	m_Double.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -678,8 +683,10 @@ void CMFCApplication5Dlg::OnBnClickedInshop()
 	m_Shrimp.ShowWindow(SW_SHOW);
 	m_Chicken.ShowWindow(SW_SHOW);
 	m_Chesse.ShowWindow(SW_SHOW);
-	m_Beaf.ShowWindow(SW_SHOW);
+	m_Double.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -699,7 +706,7 @@ void CMFCApplication5Dlg::OnBnClickedBack()
 	m_Shrimp.ShowWindow(SW_SHOW);
 	m_Chicken.ShowWindow(SW_SHOW);
 	m_Chesse.ShowWindow(SW_SHOW);
-	m_Beaf.ShowWindow(SW_SHOW);
+	m_Double.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
 
 	m_Coke.ShowWindow(SW_HIDE);
@@ -731,6 +738,8 @@ void CMFCApplication5Dlg::OnBnClickedBack()
 	m_Text1.ShowWindow(SW_HIDE);
 	m_Text2.ShowWindow(SW_HIDE);
 	m_Point.ShowWindow(SW_HIDE);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -740,9 +749,9 @@ void CMFCApplication5Dlg::OnBnClickedFork()
 	 NewDialog dlg;
 	 dlg.DoModal();
 
-	 /*m_listOrder.ShowWindow(SW_SHOW);
-	 m_strOrder.Append(L"불고기 버거 ");
-	 m_listOrder.AddString(L"불고기 버거");*/
+	 m_listOrder.ShowWindow(SW_SHOW);
+	 m_strOrder.Append(L"불고기 버거    5200");
+	 m_listOrder.AddString(L"불고기 버거    5200");
 }
 
 
@@ -753,8 +762,8 @@ void CMFCApplication5Dlg::OnBnClickedShrimp() //새우버거
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"새우버거");
-	m_listOrder.AddString(L"새우버거");
+	m_strOrder.Append(L"새우버거    4900");
+	m_listOrder.AddString(L"새우버거    4900");
 }
 
 
@@ -765,8 +774,8 @@ void CMFCApplication5Dlg::OnBnClickedChicken() //치킨버거
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"치킨버거 ");
-	m_listOrder.AddString(L"치킨버거");
+	m_strOrder.Append(L"치킨버거    5500");
+	m_listOrder.AddString(L"치킨버거    5500");
 }
 
 
@@ -777,8 +786,8 @@ void CMFCApplication5Dlg::OnBnClickedChesse() //치즈 버거
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"치즈버거 ");
-	m_listOrder.AddString(L"치즈버거");
+	m_strOrder.Append(L"치즈버거    5300");
+	m_listOrder.AddString(L"치즈버거    5300");
 }
 
 
@@ -789,8 +798,8 @@ void CMFCApplication5Dlg::OnBnClickedBeaf() //더블패티
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"더블패티 ");
-	m_listOrder.AddString(L"더블패티");
+	m_strOrder.Append(L"더블버거    6200");
+	m_listOrder.AddString(L"더블버거    6200");
 }
 
 
@@ -801,8 +810,8 @@ void CMFCApplication5Dlg::OnBnClickedSquid() //오징어
 	dlg.DoModal();
 
 	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"오징어");
-	m_listOrder.AddString(L"오징어");
+	m_strOrder.Append(L"오징어    5000");
+	m_listOrder.AddString(L"오징어    5000");
 }
 
 
@@ -952,11 +961,7 @@ void CMFCApplication5Dlg::OnBnClickedChurros() //츄러스
 
 
 
-void CMFCApplication5Dlg::OnBnClickedForkSolo()
+void CMFCApplication5Dlg::OnBnClickedText1()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	m_listOrder.ShowWindow(SW_SHOW);
-	m_strOrder.Append(L"치킨 너겟    2000");
-	m_listOrder.AddString(L"치킨 너겟    2000");
-
 }
