@@ -8,6 +8,11 @@
 #include "MFCApplication5Dlg.h"
 #include "afxdialogex.h"
 #include "NewDialog.h"
+#include "ShrimpDialog.h"
+#include "ChickenDialog.h"
+#include "CheeseDialog.h"
+#include "DoubleDialog.h"
+#include "SquidDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -56,11 +61,12 @@ CMFCApplication5Dlg::CMFCApplication5Dlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_MFCAPPLICATION5_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_strOrder.Empty();
 }
 
 void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 {
-	
+
 	CDialogEx::DoDataExchange(pDX);
 	//HOME
 	GetDlgItem(IDC_FORK)->ShowWindow(SW_HIDE);
@@ -102,7 +108,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	/*
 	DDX_Control(pDX, IDC_TEXT, m_Text);
 	*/
-	
+
 	//BURGER
 	DDX_Control(pDX, IDC_BUGER, m_Buger);
 	DDX_Control(pDX, IDC_FORK, m_Fork);
@@ -140,7 +146,7 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	//PAY
 	DDX_Control(pDX, IDC_PAY, m_Pay);
 	DDX_Control(pDX, IDC_BACK, m_Back);
-	
+
 	DDX_Control(pDX, IDC_POINT, m_Point);
 	DDX_Control(pDX, IDC_NO, m_No);
 	DDX_Control(pDX, IDC_CARD, m_Card);
@@ -148,8 +154,9 @@ void CMFCApplication5Dlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CASH, m_Cash);
 	DDX_Control(pDX, IDC_TEXT1, m_Text1);
 	DDX_Control(pDX, IDC_TEXT2, m_Text2);
-	
 
+
+	DDX_Control(pDX, IDC_LIST, m_listOrder);
 }
 
 BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
@@ -169,6 +176,29 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_PAY, &CMFCApplication5Dlg::OnBnClickedPay)
 	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
 	ON_BN_CLICKED(IDC_FORK, &CMFCApplication5Dlg::OnBnClickedFork)
+	ON_BN_CLICKED(IDC_SHRIMP, &CMFCApplication5Dlg::OnBnClickedShrimp)
+	ON_BN_CLICKED(IDC_CHICKEN, &CMFCApplication5Dlg::OnBnClickedChicken)
+	ON_BN_CLICKED(IDC_CHESSE, &CMFCApplication5Dlg::OnBnClickedChesse)
+	ON_BN_CLICKED(IDC_BEAF, &CMFCApplication5Dlg::OnBnClickedBeaf)
+	ON_BN_CLICKED(IDC_SQUID, &CMFCApplication5Dlg::OnBnClickedSquid)
+	ON_BN_CLICKED(IDC_COKE, &CMFCApplication5Dlg::OnBnClickedCoke)
+	ON_BN_CLICKED(IDC_CIDER, &CMFCApplication5Dlg::OnBnClickedCider)
+	ON_BN_CLICKED(IDC_ZEROCOKE, &CMFCApplication5Dlg::OnBnClickedZerocoke)
+	ON_BN_CLICKED(IDC_ZEROCIDER, &CMFCApplication5Dlg::OnBnClickedZerocider)
+	ON_BN_CLICKED(IDC_MILKSHAKE, &CMFCApplication5Dlg::OnBnClickedMilkshake)
+	ON_BN_CLICKED(IDC_COFFEE, &CMFCApplication5Dlg::OnBnClickedCoffee)
+	ON_BN_CLICKED(IDC_FRENCH_FRIES, &CMFCApplication5Dlg::OnBnClickedFrenchFries)
+	ON_BN_CLICKED(IDC_CHEESEBALL, &CMFCApplication5Dlg::OnBnClickedCheeseball)
+	ON_BN_CLICKED(IDC_NUGGET, &CMFCApplication5Dlg::OnBnClickedNugget)
+	ON_BN_CLICKED(IDC_COLESLAW, &CMFCApplication5Dlg::OnBnClickedColeslaw)
+	ON_BN_CLICKED(IDC_CORN_SALAD, &CMFCApplication5Dlg::OnBnClickedCornSalad)
+	ON_BN_CLICKED(IDC_CHEESE_STICK, &CMFCApplication5Dlg::OnBnClickedCheeseStick)
+	ON_BN_CLICKED(IDC_SOFTCON, &CMFCApplication5Dlg::OnBnClickedSoftcon)
+	ON_BN_CLICKED(IDC_WAFFLE, &CMFCApplication5Dlg::OnBnClickedWaffle)
+	ON_BN_CLICKED(IDC_CHOCOCON, &CMFCApplication5Dlg::OnBnClickedChococon)
+	ON_BN_CLICKED(IDC_CHURROS, &CMFCApplication5Dlg::OnBnClickedChurros)
+	
+	ON_BN_CLICKED(IDC_FORK_SOLO, &CMFCApplication5Dlg::OnBnClickedForkSolo)
 END_MESSAGE_MAP()
 
 
@@ -709,4 +739,224 @@ void CMFCApplication5Dlg::OnBnClickedFork()
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	 NewDialog dlg;
 	 dlg.DoModal();
+
+	 /*m_listOrder.ShowWindow(SW_SHOW);
+	 m_strOrder.Append(L"불고기 버거 ");
+	 m_listOrder.AddString(L"불고기 버거");*/
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedShrimp() //새우버거
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	ShrimpDialog dlg;
+	dlg.DoModal();
+
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"새우버거");
+	m_listOrder.AddString(L"새우버거");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedChicken() //치킨버거
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	ChickenDialog dlg;
+	dlg.DoModal();
+
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치킨버거 ");
+	m_listOrder.AddString(L"치킨버거");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedChesse() //치즈 버거
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CheeseDialog dlg;
+	dlg.DoModal();
+
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치즈버거 ");
+	m_listOrder.AddString(L"치즈버거");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedBeaf() //더블패티
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	DoubleDialog dlg;
+	dlg.DoModal();
+
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"더블패티 ");
+	m_listOrder.AddString(L"더블패티");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedSquid() //오징어
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	SquidDialog dlg;
+	dlg.DoModal();
+
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"오징어");
+	m_listOrder.AddString(L"오징어");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCoke() //콜라
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"콜라     2000");
+	m_listOrder.AddString(L"콜라     2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCider() //사이다
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"사이다      2000");
+	m_listOrder.AddString(L"사이다     2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedZerocoke() //제로콜라
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"제로 콜라     2000");
+	m_listOrder.AddString(L"제로 콜라    2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedZerocider() //제로사이다
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"제로 사이다     2000");
+	m_listOrder.AddString(L"제로 사이다    2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedMilkshake() //밀크쉐이크
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"밀크 쉐이크    3000");
+	m_listOrder.AddString(L"밀크 쉐이크    3000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCoffee() //커피
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"커피    3500");
+	m_listOrder.AddString(L"커피    3500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedFrenchFries() //감자 튀김
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"감자 튀김    2000");
+	m_listOrder.AddString(L"감자 튀김    2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCheeseball() //치즈볼
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치즈볼    2500");
+	m_listOrder.AddString(L"치즈볼    2500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedNugget() //치킨너겟
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치킨 너겟    2000");
+	m_listOrder.AddString(L"치킨 너겟    2000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedColeslaw() //코울슬로
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"코울슬로    3500");
+	m_listOrder.AddString(L"코울슬로    3500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCornSalad() //콘샐러드
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"콘샐러드    3500");
+	m_listOrder.AddString(L"콘샐러드    3500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedCheeseStick() //치즈스틱
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치즈스틱    1500");
+	m_listOrder.AddString(L"치즈스틱    1500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedSoftcon() //소프트콘
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"소프트콘    1000");
+	m_listOrder.AddString(L"소프트콘    1000");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedWaffle() //와플
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"와플    2500");
+	m_listOrder.AddString(L"와플    2500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedChococon() //초코콘
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"초코콘    1500");
+	m_listOrder.AddString(L"초코콘    1500");
+}
+
+
+void CMFCApplication5Dlg::OnBnClickedChurros() //츄러스
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"츄러스    2500");
+	m_listOrder.AddString(L"츄러스    2500");
+}
+
+
+
+
+void CMFCApplication5Dlg::OnBnClickedForkSolo()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	m_listOrder.ShowWindow(SW_SHOW);
+	m_strOrder.Append(L"치킨 너겟    2000");
+	m_listOrder.AddString(L"치킨 너겟    2000");
+
 }

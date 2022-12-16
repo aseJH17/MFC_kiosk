@@ -5,6 +5,7 @@
 #pragma once
 
 
+
 // CMFCApplication5Dlg 대화 상자
 class CMFCApplication5Dlg : public CDialogEx
 {
@@ -80,7 +81,7 @@ public:
 	CButton m_Point;
 	CButton m_Text1;
 	CButton m_Text2;	
-
+	CString m_strOrder;
 	//메인화면
 	
 	afx_msg void OnBnClickedTakeout();
@@ -96,4 +97,28 @@ public:
 	afx_msg void OnBnClickedPay();
 	afx_msg void OnBnClickedBack();
 	afx_msg void OnBnClickedFork();
+	CListBox m_listOrder;
+	afx_msg void OnBnClickedShrimp();
+	afx_msg void OnBnClickedChicken();
+	afx_msg void OnBnClickedChesse();
+	afx_msg void OnBnClickedBeaf();
+	afx_msg void OnBnClickedSquid();
+	afx_msg void OnBnClickedCoke();
+	afx_msg void OnBnClickedCider();
+	afx_msg void OnBnClickedZerocoke();
+	afx_msg void OnBnClickedZerocider();
+	afx_msg void OnBnClickedMilkshake();
+	afx_msg void OnBnClickedCoffee();
+	afx_msg void OnBnClickedFrenchFries();
+	afx_msg void OnBnClickedCheeseball();
+	afx_msg void OnBnClickedNugget();
+	afx_msg void OnBnClickedColeslaw();
+	afx_msg void OnBnClickedCornSalad();
+	afx_msg void OnBnClickedCheeseStick();
+	afx_msg void OnBnClickedSoftcon();
+	afx_msg void OnBnClickedWaffle();
+	afx_msg void OnBnClickedChococon();
+	afx_msg void OnBnClickedChurros();
+	
+	afx_msg void OnBnClickedForkSolo();
 };

@@ -183,15 +183,23 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CheeseDialog.h" />
+    <ClInclude Include="ChickenDialog.h" />
+    <ClInclude Include="DoubleDialog.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MFCApplication5.h" />
     <ClInclude Include="MFCApplication5Dlg.h" />
     <ClInclude Include="NewDialog.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ShrimpDialog.h" />
+    <ClInclude Include="SquidDialog.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CheeseDialog.cpp" />
+    <ClCompile Include="ChickenDialog.cpp" />
+    <ClCompile Include="DoubleDialog.cpp" />
     <ClCompile Include="MFCApplication5.cpp" />
     <ClCompile Include="MFCApplication5Dlg.cpp" />
     <ClCompile Include="NewDialog.cpp" />
@@ -201,6 +209,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ShrimpDialog.cpp" />
+    <ClCompile Include="SquidDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCApplication5.rc" />
@@ -209,6 +219,11 @@
     <None Include="res\MFCApplication5.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\cheese_burger.bmp" />
+    <Image Include="..\..\..\..\Desktop\chicken_burger.bmp" />
+    <Image Include="..\..\..\..\Desktop\double_burger.bmp" />
+    <Image Include="..\..\..\..\Desktop\Shrimp_Burger.bmp" />
+    <Image Include="..\..\..\..\Desktop\squid_burger.bmp" />
     <Image Include="res\americano.bmp" />
     <Image Include="res\back.bmp" />
     <Image Include="res\buger.bmp" />

@@ -29,4 +29,6 @@ public:
 	CButton m_Bul_burger;
 
 	afx_msg void OnPaint();
+
+	
 };
