@@ -23,9 +23,9 @@ protected:
 public:
 	afx_msg void OnBnClickedSolo();
 	afx_msg void OnBnClickedSet();
+	afx_msg void OnPaint();
 
 	CButton m_Cheese_Buger;
 	CButton m_Set;
 	CButton m_Solo;
-	afx_msg void OnPaint();
 };

@@ -9,7 +9,6 @@
 #define IDR_MAINFRAME                   128
 #define IDB_CHESSE                      130
 #define IDB_CHICKEN                     131
-#define IDB_BEAF                        132
 #define IDB_FORK                        133
 #define IDB_SHRIMP                      134
 #define IDB_SQUID                       135
@@ -60,11 +59,13 @@
 #define IDD_DIALOG6                     187
 #define IDB_SQUID_BURGER                188
 #define IDB_DOUBLE_BURGER               189
+#define IDB_BEAF                        190
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
 #define IDC_DESSERT                     1003
 #define IDC_CHESSE                      1004
+#define IDC_CHEESSE                     1004
 #define IDC_BEAF                        1005
 #define IDC_SQUID                       1006
 #define IDC_FORK                        1007
@@ -111,7 +112,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        190
+#define _APS_NEXT_RESOURCE_VALUE        191
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101

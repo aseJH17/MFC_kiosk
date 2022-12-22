@@ -221,6 +221,7 @@
   <ItemGroup>
     <Image Include="res\americano.bmp" />
     <Image Include="res\back.bmp" />
+    <Image Include="res\beaf.bmp" />
     <Image Include="res\bitmap2.bmp" />
     <Image Include="res\buger.bmp" />
     <Image Include="res\bul_burger.bmp" />

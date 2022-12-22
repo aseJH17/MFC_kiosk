@@ -12,7 +12,7 @@
 IMPLEMENT_DYNAMIC(CheeseDialog, CDialogEx)
 
 CheeseDialog::CheeseDialog(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_DIALOG4, pParent)
+	: CDialogEx(IDD_DIALOG3, pParent)
 {
 
 }

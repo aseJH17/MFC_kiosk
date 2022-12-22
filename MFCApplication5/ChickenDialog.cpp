@@ -12,7 +12,7 @@
 IMPLEMENT_DYNAMIC(ChickenDialog, CDialogEx)
 
 ChickenDialog::ChickenDialog(CWnd* pParent /*=nullptr*/)
-	: CDialogEx(IDD_DIALOG3, pParent)
+	: CDialogEx(IDD_DIALOG4, pParent)
 {
 
 }

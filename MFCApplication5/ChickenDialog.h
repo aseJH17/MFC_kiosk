@@ -28,5 +28,4 @@ public:
 	CButton m_Chicken_Buger;
 	CButton m_Set;
 	CButton m_Solo;
-	afx_msg void OnBnClickedChickenBurger();
 };
