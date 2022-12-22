@@ -8,6 +8,11 @@
 #include "MFCApplication5Dlg.h"
 #include "afxdialogex.h"
 #include "NewDialog.h"
+#include "ShrimpDialog.h"
+#include "ChickenDialog.h"
+#include "CheeseDialog.h"
+#include "DoubleDialog.h"
+#include "SquidDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -171,13 +176,11 @@ BEGIN_MESSAGE_MAP(CMFCApplication5Dlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BACK, &CMFCApplication5Dlg::OnBnClickedBack)
 
 	ON_BN_CLICKED(IDC_FORK, &CMFCApplication5Dlg::OnBnClickedFork)
-	/*
 	ON_BN_CLICKED(IDC_SHRIMP, &CMFCApplication5Dlg::OnBnClickedShrimp)
 	ON_BN_CLICKED(IDC_CHICKEN, &CMFCApplication5Dlg::OnBnClickedChicken)
 	ON_BN_CLICKED(IDC_CHESSE, &CMFCApplication5Dlg::OnBnClickedChesse)
 	ON_BN_CLICKED(IDC_BEAF, &CMFCApplication5Dlg::OnBnClickedBeaf)
 	ON_BN_CLICKED(IDC_SQUID, &CMFCApplication5Dlg::OnBnClickedSquid)
-	*/
 	ON_BN_CLICKED(IDC_COKE, &CMFCApplication5Dlg::OnBnClickedCoke)
 	ON_BN_CLICKED(IDC_CIDER, &CMFCApplication5Dlg::OnBnClickedCider)
 	ON_BN_CLICKED(IDC_ZEROCOKE, &CMFCApplication5Dlg::OnBnClickedZerocoke)
@@ -631,6 +634,8 @@ void CMFCApplication5Dlg::OnBnClickedPay()
 	m_No.ShowWindow(SW_SHOW);
 	m_Text1.ShowWindow(SW_SHOW);
 	m_Text2.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_HIDE);
 }
 
 
@@ -653,6 +658,8 @@ void CMFCApplication5Dlg::OnBnClickedTakeout()
 	m_Chesse.ShowWindow(SW_SHOW);
 	m_Beaf.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -675,6 +682,8 @@ void CMFCApplication5Dlg::OnBnClickedInshop()
 	m_Chesse.ShowWindow(SW_SHOW);
 	m_Beaf.ShowWindow(SW_SHOW);
 	m_Squid.ShowWindow(SW_SHOW);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -726,6 +735,8 @@ void CMFCApplication5Dlg::OnBnClickedBack()
 	m_Text1.ShowWindow(SW_HIDE);
 	m_Text2.ShowWindow(SW_HIDE);
 	m_Point.ShowWindow(SW_HIDE);
+
+	m_listOrder.ShowWindow(SW_SHOW);
 }
 
 
@@ -741,18 +752,9 @@ void CMFCApplication5Dlg::OnBnClickedFork()
 
 }
 
-void NewDialog::OnBnClickedButton1() 
-{
-	CDialogEx::OnOK();
-}
 
-void NewDialog::OnBnClickedButton2()
-{
-	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
-	CDialogEx::OnOK();
-}
 
-/*
+
 void CMFCApplication5Dlg::OnBnClickedShrimp() //새우버거
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -811,7 +813,7 @@ void CMFCApplication5Dlg::OnBnClickedSquid() //오징어
 	m_strOrder.Append(L"오징어");
 	m_listOrder.AddString(L"오징어");
 }
-*/
+
 
 void CMFCApplication5Dlg::OnBnClickedCoke() //콜라
 {

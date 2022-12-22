@@ -50,6 +50,16 @@
 #define IDB_BUL_BURGER                  177
 #define IDB_SET                         178
 #define IDB_SOLO                        179
+#define IDB_SHIRIMP_BURGER              182
+#define IDD_DIALOG2                     183
+#define IDD_DIALOG3                     184
+#define IDB_CHEESE_BURGER               185
+#define IDD_DIALOG4                     185
+#define IDD_DIALOG5                     186
+#define IDB_CHICKEN_BURGER              187
+#define IDD_DIALOG6                     187
+#define IDB_SQUID_BURGER                188
+#define IDB_DOUBLE_BURGER               189
 #define IDC_BUGER                       1000
 #define IDC_DRINK                       1001
 #define IDC_SIDE                        1002
@@ -91,14 +101,19 @@
 #define IDC_SET                         1042
 #define IDC_SOLO                        1043
 #define IDC_BUL_BURGER                  1044
+#define IDC_SHIRIMP_BURGER              1046
+#define IDC_CHICKEN_BURGER              1047
+#define IDC_CHEESE_BURGER               1048
+#define IDC_DOUBLE_BURGER               1049
+#define IDC_SQUID_BURGER                1050
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        180
+#define _APS_NEXT_RESOURCE_VALUE        190
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1045
+#define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

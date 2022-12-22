@@ -46,7 +46,7 @@ END_MESSAGE_MAP()
 
 // NewDialog 메시지 처리기
 
-/*
+
 void NewDialog::OnBnClickedButton2()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
@@ -60,7 +60,7 @@ void NewDialog::OnBnClickedButton1()
 
 	CDialogEx::OnOK();
 }
-*/
+
 
 void NewDialog::OnPaint()
 {

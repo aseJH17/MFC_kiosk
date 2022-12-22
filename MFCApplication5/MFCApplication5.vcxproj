@@ -183,15 +183,23 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CheeseDialog.h" />
+    <ClInclude Include="ChickenDialog.h" />
+    <ClInclude Include="DoubleDialog.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MFCApplication5.h" />
     <ClInclude Include="MFCApplication5Dlg.h" />
     <ClInclude Include="NewDialog.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ShrimpDialog.h" />
+    <ClInclude Include="SquidDialog.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CheeseDialog.cpp" />
+    <ClCompile Include="ChickenDialog.cpp" />
+    <ClCompile Include="DoubleDialog.cpp" />
     <ClCompile Include="MFCApplication5.cpp" />
     <ClCompile Include="MFCApplication5Dlg.cpp" />
     <ClCompile Include="NewDialog.cpp" />
@@ -201,6 +209,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ShrimpDialog.cpp" />
+    <ClCompile Include="SquidDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MFCApplication5.rc" />
@@ -211,14 +221,17 @@
   <ItemGroup>
     <Image Include="res\americano.bmp" />
     <Image Include="res\back.bmp" />
+    <Image Include="res\bitmap2.bmp" />
     <Image Include="res\buger.bmp" />
     <Image Include="res\bul_burger.bmp" />
     <Image Include="res\Card.bmp" />
     <Image Include="res\Cash.bmp" />
     <Image Include="res\cheeseball.bmp" />
     <Image Include="res\cheesestick.bmp" />
+    <Image Include="res\cheese_burger.bmp" />
     <Image Include="res\chesse.bmp" />
     <Image Include="res\chicken.bmp" />
+    <Image Include="res\chicken_burger.bmp" />
     <Image Include="res\chococon.bmp" />
     <Image Include="res\churros.bmp" />
     <Image Include="res\CIDER.bmp" />
@@ -228,6 +241,7 @@
     <Image Include="res\Coupon.bmp" />
     <Image Include="res\dessert.bmp" />
     <Image Include="res\double.bmp" />
+    <Image Include="res\double_burger.bmp" />
     <Image Include="res\drink.bmp" />
     <Image Include="res\FORK.bmp" />
     <Image Include="res\french_fries.bmp" />
@@ -241,10 +255,12 @@
     <Image Include="res\Point.bmp" />
     <Image Include="res\set.bmp" />
     <Image Include="res\shrimpbmp.bmp" />
+    <Image Include="res\Shrimp_Burger.bmp" />
     <Image Include="res\side.bmp" />
     <Image Include="res\softcon.bmp" />
     <Image Include="res\solo.bmp" />
     <Image Include="res\squid.bmp" />
+    <Image Include="res\squid_burger.bmp" />
     <Image Include="res\takeout.bmp" />
     <Image Include="res\tansan.bmp" />
     <Image Include="res\text1.bmp" />

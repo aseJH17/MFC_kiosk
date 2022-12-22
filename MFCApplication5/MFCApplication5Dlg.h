@@ -101,13 +101,12 @@ public:
 	afx_msg void OnBnClickedFork();
 
 	CListBox m_listOrder;
-	/*
+	
 	afx_msg void OnBnClickedShrimp();
 	afx_msg void OnBnClickedChicken();
 	afx_msg void OnBnClickedChesse();
 	afx_msg void OnBnClickedBeaf();
 	afx_msg void OnBnClickedSquid();
-	*/
 	afx_msg void OnBnClickedCoke();
 	afx_msg void OnBnClickedCider();
 	afx_msg void OnBnClickedZerocoke();
